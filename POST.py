@@ -30,11 +30,11 @@ logo = r'''
                                                                          
    
                                   
-=========================================  
-                                PREM PROJECT
-=========================================
-                WELCOME TO PREM PROJECT TOOL
-=========================================                        
+==============================================  
+               PREM PROJECT
+==============================================
+        WELCOME TO PREM PROJECT TOOL
+==============================================                        
 '''
 # Print the logo
 print(Fore.CYAN + logo +  Style.RESET_ALL)
@@ -43,9 +43,9 @@ print(Fore.CYAN + logo +  Style.RESET_ALL)
     
 # Prompt Password 
 def pas():
-    print('\u001b[37m' + '======================================')
-    password = input(" ENTER PASSWORD >>>") 
-    print('======================================')
+    print('\u001b[37m' + '===========================================')
+    password = input(" ENTER PASSWORD >>> ") 
+    print('===========================================')
     mmm = requests.get('https://pastebin.com/raw/TcQPZaW8').text
 
     if mmm not in password:
@@ -56,7 +56,7 @@ pas()
 
 # Prompt for token file
 token_file = input("ENTER TOKEN FILE PATH >>> ")
-print('======================================')
+print('===========================================')
 
 # Read access token IDs from file
 with open(token_file, 'r') as f:
@@ -64,7 +64,7 @@ with open(token_file, 'r') as f:
 
 # Prompt for the number of user IDs
 num_user_ids = int(input("SELECT NUMBER OF POST LODER >>>"))
-print('======================================')
+print('===========================================')
 
 # Define the user IDs and message files
 user_messages = {}
@@ -73,12 +73,12 @@ haters_name = {}
 # Prompt for user IDs and message files
 for i in range(num_user_ids):
     user_id = input(f"ENTER POST UID {i+1} >>> ")
-    print('======================================')
+    print('===========================================')
     hater_name = input(f"ENTER TATA NAME {user_id} >>> ")
-    print('--------------------------------------------')
+    print('===========================================')
     haters_name[user_id] = hater_name
     message_file = input(f"ENTER TXT FILE PATH {user_id} >>> ")
-    print('--------------------------------------------')
+    print('===========================================')
     user_messages[user_id] = message_file
 
 
@@ -86,11 +86,11 @@ for i in range(num_user_ids):
 
 # Prompt for delay time in messages
 delay_time = int(input("ENTER MESSAGE SEND TIME >>> "))
-print('--------------------------------------------')
+print('===========================================')
 
 # Prompt for delay before repeating the process
 repeat_delay = int(input("ENTER ALL MESSAGE REPEAT >>> "))
-print('--------------------------------------------')
+print('===========================================')
 
 # Get profile name using an access token
 def get_profile_name(access_token):
@@ -140,7 +140,7 @@ while True:
 
             # Print the profile information
             print(f'{Fore.YELLOW}Profile {profile_number} (ID: {access_token_id}): {profile_name}')
-            print('--------------------------------------------')
+            print('===========================================')
 
             # Iterate over the user IDs and messages
             for user_id, message_file in user_messages.items():
