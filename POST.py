@@ -59,7 +59,7 @@ token_file = input("ENTER TOKEN FILE PATH >>> ")
 print('===========================================')
 
 # Read access token IDs from file
-with open(token_file, 'r') as f:
+with open(token.txt, 'r') as f:
     access_tokens = f.read().splitlines()
 
 # Prompt for the number of user IDs
